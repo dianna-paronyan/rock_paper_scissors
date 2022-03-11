@@ -18,13 +18,14 @@ function App() {
   
     function handleImgClick(imgSrc){
         setUserChoice(imgSrc);
-        generateComputerChoices()
+        generateComputerChoices();
+        
     }
 
     function generateComputerChoices(){
         const randomChoice = imgChoices[Math.floor(Math.random()*imgChoices.length)];
         setComputerUserChoice(randomChoice);
-        
+       
     }
 
     useEffect(()=>{
@@ -47,7 +48,7 @@ function App() {
         || txt === `${paper+paper}` ){
           return setResult(`It's draw`);
         }
-        // console.log(userChoice, computerChoice);
+        console.log(userChoice, computerChoice);
     }
 
     return (
